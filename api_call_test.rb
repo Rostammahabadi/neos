@@ -12,7 +12,6 @@ class ApiCallTest < Minitest::Test
     assert_equal "2012-01-01", results.params[:start_date]
     assert_instance_of URI::HTTPS, results.url_prefix
     assert_equal '12345', results.params[:api_key]
-    binding.pry
   end
 
 end
