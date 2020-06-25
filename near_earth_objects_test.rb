@@ -4,10 +4,6 @@ require 'pry'
 require_relative 'near_earth_objects'
 
 class NearEarthObjectsTest < Minitest::Test
-  # def test_a_date_returns_a_list_of_neos
-  #   results = NearEarthObjects.find_neos_by_date('2019-03-30')
-  #   assert_equal '(2019 GD4)', results[:astroid_list][0][:name]
-  # end
 
   def test_it_exists
     new = NearEarthObjects.new("2012-01-01")
@@ -36,7 +32,7 @@ class NearEarthObjectsTest < Minitest::Test
   def test_formatted_asteroid_data
     new = NearEarthObjects.new("2012-01-01")
     expected = [{:name=>"(2012 BC14)", :diameter=>"223 ft", :miss_distance=>"1835888 miles"}, {:name=>"(2011 YP10)", :diameter=>"234 ft", :miss_distance=>"7851900 miles"}, {:name=>"(2012 LR1)", :diameter=>"1548 ft", :miss_distance=>"44876935 miles"}, {:name=>"(2017 BX)", :diameter=>"48 ft", :miss_distance=>"27234129 miles"}, {:name=>"152671 (1998 HL3)", :diameter=>"1862 ft", :miss_distance=>"34558684 miles"}, {:name=>"(2007 AM)", :diameter=>"891 ft", :miss_distance=>"17718060 miles"}, {:name=>"(2014 MV18)", :diameter=>"354 ft", :miss_distance=>"38219458 miles"}]
-    
+
     assert_equal expected, new.formatted_asteroid_data
   end
 end
